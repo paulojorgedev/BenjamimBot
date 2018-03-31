@@ -45,7 +45,7 @@ intents.matches("Tarefas", (session,args)=>{
     
 
     
-    request("https://benjamim.azurewebsites.net/", (err, res, body) => {
+    request("https://benjamimapi.azurewebsites.net/", (err, res, body) => {
         if(!body) session.send("FALHA NA EXECUÇÃO");
         if(err) session.send("ERRO");
         const tarefas = JSON.parse(body);
